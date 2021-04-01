@@ -16,7 +16,7 @@ import javax.persistence.Id;
 @DynamicInsert
 @DynamicUpdate
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Member {
+public class Member extends BaseTimeEntity {
     @Id
     @GeneratedValue
     @Column(name = "member_id")
