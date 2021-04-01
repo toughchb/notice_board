@@ -1,6 +1,8 @@
 package me.hbchae.notice_board.domain;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -13,6 +15,7 @@ import javax.persistence.Id;
 @Getter
 @DynamicInsert
 @DynamicUpdate
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Notice {
     @Id
     @GeneratedValue
@@ -22,5 +25,7 @@ public class Notice {
     @Column(nullable = false, length = 255)
     private String content;
 
-
+    public Notice(String content) {
+        this.content = content;
+    }
 }
