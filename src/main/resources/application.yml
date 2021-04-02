@@ -17,7 +17,10 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
-
+  security:
+    user:
+      name: "admin"
+      password: "admin"
 logging:
   level:
     org.hibernate.SQL: debug

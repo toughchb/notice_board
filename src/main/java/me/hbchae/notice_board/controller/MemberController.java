@@ -2,7 +2,6 @@ package me.hbchae.notice_board.controller;
 
 import lombok.RequiredArgsConstructor;
 import me.hbchae.notice_board.domain.Member;
-import me.hbchae.notice_board.domain.MemberForm;
 import me.hbchae.notice_board.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

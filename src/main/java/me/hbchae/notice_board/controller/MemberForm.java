@@ -1,4 +1,4 @@
-package me.hbchae.notice_board.domain;
+package me.hbchae.notice_board.controller;
 
 import lombok.Getter;
 import lombok.Setter;
