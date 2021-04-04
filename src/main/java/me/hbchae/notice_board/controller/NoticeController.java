@@ -22,9 +22,9 @@ public class NoticeController {
 
     @GetMapping("/notices")
     public String list(@PageableDefault Pageable pageable, Model model) {
-        Page<Notice> boardList = noticeService.findNotices(pageable);
-        boardList.stream().forEach(e -> e.getContent());
-        model.addAttribute("boardList", boardList);
+        Page<Notice> noticeList = noticeService.findNotices(pageable);
+        noticeList.stream().forEach(e -> e.getContent());
+        model.addAttribute("noticeList", noticeList);
         return "/notices/noticeList";
     }
 
@@ -34,6 +34,5 @@ public class NoticeController {
                          @RequestParam("content") String content) {
         noticeService.createNotice(memberId,title,content);
         return "redirect:/notices";
-
     }
 }

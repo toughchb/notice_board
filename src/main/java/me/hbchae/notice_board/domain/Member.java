@@ -3,6 +3,7 @@ package me.hbchae.notice_board.domain;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -26,7 +27,8 @@ public class Member extends BaseTimeEntity {
     @Column(name = "member_id")
     private Long id;
 
-    private String name; //Unique 제약 조건 걸어야함
+    @Column(unique = true)
+    private String name;
 
     private String password;
 
